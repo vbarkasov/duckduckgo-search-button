@@ -1,0 +1,35 @@
+{
+	"manifest_version": 2,
+	"default_locale": "en",
+	"name": "DuckDuckGo Search Button",
+	"description": "This extension adds a button to search through the search engine DuckDuckGo on Google search pages",
+	"version": "0.0.1",
+	"author": "Vladimir Barkasov",
+	"homepage_url": "https://vbarkasov.com/",
+	"icons": {
+		"32": "img/icons/default32.png",
+		"128": "img/icons/default128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"js/content.js"
+			],
+			"css": [
+				"css/content.css"
+			]
+		}
+	],
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs"
+	],
+	"browser_action": {
+		"default_icon": "img/icons/default128.png"
+	}
+}
